@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/products',function () {
+    return "<h1>All Products</h1>";
+});
+
+Route::get('/products/create',function () {
+    return "<h1>Add New Products</h1>";
+});
+
+Route::get('/products/{product_is}',function ($product) {
+    return "<h1>Product {$product}</h1>";
+});
